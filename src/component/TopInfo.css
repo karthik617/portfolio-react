@@ -155,6 +155,6 @@
     left: -4.3rem;
   }
   .top-info {
-    height: 100%;
+    height: max-content;
   }
 }
