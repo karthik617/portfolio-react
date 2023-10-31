@@ -154,4 +154,7 @@
     height: 400px;
     left: -4.3rem;
   }
+  .top-info {
+    height: 100%;
+  }
 }
