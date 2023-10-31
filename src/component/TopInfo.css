@@ -157,4 +157,7 @@
   .top-info {
     height: max-content;
   }
+  .git-line {
+    height: max-content;
+  }
 }
