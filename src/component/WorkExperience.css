@@ -1,0 +1,89 @@
+.work-experience {
+  color: #fff;
+}
+.octicon-ed {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.glowing-icon-glow-wk {
+  background-color: #ea6045;
+  filter: blur(17px);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.icon-container-ed {
+  left: -2.5rem;
+  position: relative;
+}
+.git-line-wk {
+  width: 3px;
+  background: linear-gradient(
+    #d2a8ff,
+    #a371f7 10%,
+    #196c2e 70%,
+    #2ea043 80%,
+    #56d364 90%,
+    #0d1117
+  );
+  height: 100%;
+  left: -2.5rem;
+  position: relative;
+}
+.text-color {
+  color: #7ee787;
+}
+@media screen and (max-width: 2560px) {
+  .icon-container-ed {
+    left: -2.5rem;
+  }
+  .git-line-wk {
+    left: -2.5rem;
+  }
+}
+@media screen and (max-width: 1880px) {
+  .icon-container-ed {
+    left: -2.5rem;
+  }
+  .git-line-wk {
+    left: -2.5rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .icon-container-ed {
+    left: -1.5rem;
+  }
+  .git-line-wk {
+    left: -1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .icon-container-ed {
+    left: -1rem;
+  }
+  .git-line-wk {
+    left: -1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon-container-ed {
+    left: -0.5rem;
+  }
+  .git-line-wk {
+    left: -0.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .icon-container-ed {
+    left: -0.5rem;
+  }
+  .git-line-wk {
+    left: -0.5rem;
+  }
+}

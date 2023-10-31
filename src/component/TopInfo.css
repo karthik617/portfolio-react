@@ -1,0 +1,157 @@
+.top-info {
+  color: #fff;
+  height: 100vh;
+}
+.start-line {
+  width: 437px;
+  height: 637px;
+}
+.octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.glowing-icon-glow {
+  background-color: #dd7df7;
+  filter: blur(17px);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.icon-container {
+  left: -2.5rem;
+  position: relative;
+}
+.git-line {
+  width: 3px;
+  background: linear-gradient(
+    #d2a8ff,
+    #a371f7 10%,
+    #196c2e 70%,
+    #2ea043 80%,
+    #56d364
+  );
+  height: 100%;
+  left: -2.5rem;
+  position: relative;
+}
+.details {
+  margin-top: 150px;
+  padding-top: 120px;
+}
+.greeting {
+  font-size: 20vh;
+  font-weight: 600;
+}
+.header {
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+.role-desc {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+@media screen and (max-width: 1880px) {
+  .icon-container {
+    left: -2.5rem;
+  }
+  .git-line {
+    left: -2.5rem;
+  }
+  .greeting {
+    font-size: 10vh;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .icon-container {
+    left: -1.5rem;
+  }
+  .git-line {
+    left: -1.5rem;
+  }
+  .greeting {
+    font-size: 10vh;
+    font-weight: 500;
+  }
+  .start-line {
+    width: 500px;
+    height: 500px;
+    left: -4.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .icon-container {
+    left: -1rem;
+  }
+  .git-line {
+    left: -1rem;
+  }
+  .greeting {
+    font-size: 7vh;
+    font-weight: 450;
+  }
+  .header {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .role-desc {
+    font-size: 2.5rem;
+    min-width: 400px;
+  }
+  .start-line {
+    width: 400px;
+    height: 400px;
+    left: -3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon-container {
+    left: -0.5rem;
+  }
+  .git-line {
+    left: -0.5rem;
+  }
+  .greeting {
+    font-size: 7vh;
+    font-weight: 450;
+  }
+  .header {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .role-desc {
+    font-size: 2.5rem;
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .icon-container {
+    left: -0.5rem;
+  }
+  .git-line {
+    left: -0.5rem;
+  }
+  .greeting {
+    font-size: 5vh;
+    font-weight: 450;
+  }
+  .header {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .role-desc {
+    font-size: 1.9rem;
+    min-width: 300px;
+  }
+  .start-line {
+    width: 400px;
+    height: 400px;
+    left: -4.3rem;
+  }
+}
