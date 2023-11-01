@@ -1,0 +1,10 @@
+*{
+    color: #fff;
+}
+.box {
+    margin-block: 20px;
+}
+.box > p {
+    margin-bottom: 0.5rem !important;
+    line-height: 0;
+}

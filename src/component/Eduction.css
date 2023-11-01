@@ -194,4 +194,7 @@
   .git-line-ed {
     left: -0.5rem;
   }
+  .education-detail {
+    width: 105%;
+  }
 }

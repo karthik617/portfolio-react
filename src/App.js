@@ -1,31 +1,15 @@
-import "./App.css";
-import heroBg from "./Images/hero-bg.webp";
-import TopInfo from "./component/TopInfo";
-import Education from "./component/Education";
-import WorkExperience from "./component/WorkExperience";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
-    <div className="main">
-      <div className="bg-img">
-        <img src={heroBg} alt="bg" />
-      </div>
-      <section>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </section>
-      <TopInfo />
-      <Education />
-      <WorkExperience />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/aboutme" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

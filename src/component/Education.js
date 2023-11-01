@@ -13,101 +13,47 @@ export default function Eduction() {
   const eduDetail3 = useRef(null);
   const eduDetail4 = useRef(null);
 
-  const isElementInViewport = (el) => {
-    if (el !== null) {
-      var rect = el.getBoundingClientRect();
-      return (
-        (rect.top + rect.height) >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight - 100) &&
-        rect.right <= window.innerWidth
-      );
+const elementClasses = [
+  { element: eduIcon, classes: ["icon", "icon-transition"] },
+  { element: eduLine, classes: ["line", "line-transition"] },
+  { element: eduD, classes: ["content", "content-transition"] },
+  { element: eduDetail, classes: ["detail-box", "detail-box-transition"] },
+  { element: eduDetail2, classes: ["detail-box", "detail-box-transition"] },
+  { element: eduDetail3, classes: ["detail-box", "detail-box-transition"] },
+  { element: eduDetail4, classes: ["detail-box", "detail-box-transition"] },
+];
+
+const isElementInViewport = (el) => {
+  if (el !== null) {
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top + rect.height) >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight - 100) &&
+      rect.right <= window.innerWidth
+    );
+  }
+};
+
+const toggleClasses = (element, classes) => {
+  if (isElementInViewport(element.current)) {
+    element.current.classList.remove(classes[0]);
+    element.current.classList.add(classes[1]);
+  } else {
+    if (element.current !== null) {
+      element.current.classList.add(classes[0]);
+      element.current.classList.remove(classes[1]);
     }
-  };
-  const updateVisibilityStatus = () => {
-    // for icon
-    if (isElementInViewport(eduIcon.current)) {
-      eduIcon.current.classList.remove("icon");
-      eduIcon.current.classList.add("icon-transition");
-      // eduIcon.current.classList.toggle("icon-transition");
-    } else {
-      if (eduIcon.current !== null) {
-        eduIcon.current.classList.add("icon");
-        eduIcon.current.classList.remove("icon-transition");
-        // eduIcon.current.classList.toggle("icon");
-      }
-    }
-    // for line
-    if (isElementInViewport(eduLine.current)) {
-      eduLine.current.classList.remove("line");
-      eduLine.current.classList.add("line-transition");
-      // eduLine.current.classList.toggle("line-transition");
-    } else {
-      if (eduLine.current !== null) {
-        eduLine.current.classList.add("line");
-        eduLine.current.classList.remove("line-transition");
-        // eduLine.current.classList.toggle("line");
-      }
-    }
-    // for content
-    if (isElementInViewport(eduD.current)) {
-      eduD.current.classList.remove("content");
-      eduD.current.classList.add("content-transition");
-      // eduD.current.classList.toggle("content-transition");
-    } else {
-      if (eduD.current !== null) {
-        eduD.current.classList.add("content");
-        eduD.current.classList.remove("content-transition");
-        // eduD.current.classList.toggle("content");
-      }
-    }
-    
-    if (isElementInViewport(eduDetail.current)) {
-      eduDetail.current.classList.remove("detail-box");
-      eduDetail.current.classList.add("detail-box-transition");
-      // eduDetail.current.classList.toggle("detail-box-transition");
-    } else {
-      if (eduDetail.current !== null) {
-        eduDetail.current.classList.add("detail-box");
-        eduDetail.current.classList.remove("detail-box-transition");
-        // eduDetail.current.classList.toggle("detail-box");
-      }
-    }
-    if (isElementInViewport(eduDetail2.current)) {
-      eduDetail2.current.classList.remove("detail-box");
-      eduDetail2.current.classList.add("detail-box-transition");
-      // eduDetail2.current.classList.toggle("detail-box-transition");
-    } else {
-      if (eduDetail2.current !== null) {
-        eduDetail2.current.classList.add("detail-box");
-        eduDetail2.current.classList.remove("detail-box-transition");
-        // eduDetail2.current.classList.toggle("detail-box");
-      }
-    }
-    if (isElementInViewport(eduDetail3.current)) {
-      eduDetail3.current.classList.remove("detail-box");
-      eduDetail3.current.classList.add("detail-box-transition");
-      // eduDetail3.current.classList.toggle("detail-box-transition");
-    } else {
-      if (eduDetail3.current !== null) {
-        eduDetail3.current.classList.add("detail-box");
-        eduDetail3.current.classList.remove("detail-box-transition");
-        // eduDetail3.current.classList.toggle("detail-box");
-      }
-    }
-    if (isElementInViewport(eduDetail4.current)) {
-      eduDetail4.current.classList.remove("detail-box");
-      eduDetail4.current.classList.add("detail-box-transition");
-      // eduDetail4.current.classList.toggle("detail-box-transition");
-    } else {
-      if (eduDetail4.current !== null) {
-        eduDetail4.current.classList.add("detail-box");
-        eduDetail4.current.classList.remove("detail-box-transition");
-        // eduDetail4.current.classList.toggle("detail-box");
-      }
-    }
-  };
-  window.addEventListener("scroll", updateVisibilityStatus);
+  }
+};
+
+const updateVisibilityStatus = () => {
+  elementClasses.forEach((elementClass) => {
+    toggleClasses(elementClass.element, elementClass.classes);
+  });
+};
+
+window.addEventListener("scroll", updateVisibilityStatus);
 
   // styling 
   
